@@ -10,10 +10,12 @@ class BooksController < ApplicationController
   end
 
   def index
-    @book = Book.all
+    @books = Book.all
   end
 
   def show
+    @book = Book.find(params[:id])
+    # 1件だけ取り出すので単数形
   end
 
   def edit
