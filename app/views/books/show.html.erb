@@ -1,8 +1,13 @@
-<h2>Title:</h2>
-<p><%= @book.title %></p>
+<p>
+ <strong>Title:</strong>
+ <%= @book.title %>
+</p>
 
-<h2>Body:</h2>
-<p><%= @book.body %></p>
+<p>
+ <strong>Body:</strong>
+ <%= @book.body %>
+</p>
+
 <%= link_to "Edit", edit_book_path(@book.id) %>
-
-<%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "Are you sure you want to permanently delete this？" %>
+|
+<%= link_to "Back", books_path(@book.id) %>
