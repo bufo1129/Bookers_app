@@ -1,14 +1,8 @@
-<h1>Editing Book</h1>
-<%= form_with model: @book do |f| %>
+<h1>Editing Book</h1
 
-<div>
-  <ul>
-    <h5><%= @book.errors.count %> error occurred.</h5>
-      <% @book.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-  </ul>
-</div>
+
+
+<%= form_with model: @book, url: '/books', method: :PATCH do |f| %>
 
   <p>Title</p>
   <%= f.text_field :title %>
