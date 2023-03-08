@@ -29,10 +29,10 @@
 <% if @book.errors.any? %>
 <div>
   <ul>
-    <h5><%= @book.errors.count %> errors occurred.</h5>
-      <% @book.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+    <h2><%= @book.errors.count %> errors occurred.</h2>
+    <% @book.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
   </ul>
 </div>
 <% end %>
