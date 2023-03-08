@@ -26,7 +26,6 @@ class BooksController < ApplicationController
 
   def edit
     @book = Book.find(params[:id])
-    
   end
 
   def update
@@ -35,7 +34,6 @@ class BooksController < ApplicationController
       flash[:notice] = "Post updated"
       redirect_to book_path(@book.id)
     else
-
       render:edit
     end
   end
